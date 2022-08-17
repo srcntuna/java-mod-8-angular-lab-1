@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  currName:string = '';
+  currSport:string = '';
+  status:boolean = false;
+
    models = [
     {
       name: "Cristiano Ronaldo",
@@ -24,5 +28,34 @@ export class AppComponent {
       active: false,
     }
   ];
+
+
+ updateStatus():void {
+
+  if (this.status){
+    this.status = false;
+  }else{
+    this.status = true;
+  }
+
+
+ }
+
+ onAddModel():void {
+
+  let newModel = {
+    name : this.currName,
+    sport: this.currSport,
+    active: this.status
+  }
+
+  this.models.push(newModel);
+
+
+  this.currName = '';
+  this.currSport = '';
+
+ }
+
 
 }
