@@ -1,1 +1,10 @@
 <h1 class="header">Welcome to the best simple Angular app ever!!</h1>
+
+<h2>Models:</h2>
+
+<div>
+  <ul>
+    <li *ngFor="let model of models">
+      {{ model.name}} ({{ model.sport}}) <span *ngIf="model.active">is active</span><span *ngIf="!model.active">is not active</span>
+  </ul>
+</div>

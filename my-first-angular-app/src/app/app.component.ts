@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-angular-app';
+
+   models = [
+    {
+      name: "Cristiano Ronaldo",
+      sport: "Soccer",
+      active: true,
+    },
+    {
+      name: "Michael Jordan",
+      sport: "NBA Basketball",
+      active: false,
+    },
+    {
+      name: "Andre Agassi",
+      sport: "Tennis",
+      active: false,
+    }
+  ];
+
 }
